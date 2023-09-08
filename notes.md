@@ -1,0 +1,2 @@
+- GraphQL is an API query language and run-time
+- Hasura is a backend server for parsing and automating these queries.
