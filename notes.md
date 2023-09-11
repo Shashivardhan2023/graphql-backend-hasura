@@ -33,4 +33,10 @@
 - Actions have permission settings to allow specific users to trigger them
 
 ### Database Migrations & Metadata:
+- Migrations are used to recreate database schema
+- Each migration is specified by two YAML files
+- Metadata consists of permissions, relationships, event triggers, etc
+- Using hasura console will automatically create migrations config files for every change to the schema
+- Migration Squashing can then be used to squash multiple migration configs into one feature migration
+- Seed Migrations are used to populate migrated tables
 - 
