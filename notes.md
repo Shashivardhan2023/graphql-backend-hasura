@@ -1,14 +1,26 @@
 - GraphQL is an API query language and run-time
 - Hasura is a backend server for parsing and automating these queries.
 
-Fields:
-- sorting with `order_by`: choose columns by which to sort and additionally ascending, descending and nulls_first or nulls_last
+### Fields:
+- Sorting with `order_by`: choose columns by which to sort and additionally ascending, descending and nulls_first or nulls_last
   - use `distinct_on` to avoid querying duplicate entries
-- filtering and full-text search with `where`: choose columns and values to filter using conditional operations
-- combining filters with `_and`, `_not` and `_or`
-- pagination with `limit` and `offset`
+- Filtering and full-text search with `where`: choose columns and values to filter using conditional operations
+- Combining filters with `_and`, `_not` and `_or`
+- Pagination with `limit` and `offset`
 
-Operations:
+### Operations:
 - Mutations used to create, update and delete items
 - Queries used to fetch data
 - Subscriptions used to fetch data in realtime
+
+### Event Triggers:
+- Functions to be called when an operation is executed
+- Makes call to specified endpoint when specified table is mutated
+
+### Actions:
+- Actions are triggers to call REST endpoints whenever an operation is executed
+- These are used to interact with services which do not support GraphQL
+- Declare a REST endpoint as Handler to be called when action is triggered
+
+### Remote Schema:
+- Remote Schemas are used when Hasura needs to interact with other GraphQL services
